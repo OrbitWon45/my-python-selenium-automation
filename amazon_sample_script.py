@@ -12,8 +12,8 @@ service = Service(executable_path=r'C:\Users\white\my-python-selenium-automation
 driver = webdriver.Chrome(service=service)
 driver.maximize_window()
 
-driver.get('https://www.amazon.com/')
-
+driver.get('https://www.amazon.com/home')
+sleep(3)
 driver.find_element(By.ID, 'twotabsearchtextbox').send_keys('car')
 
 driver.find_element(By.ID, 'nav-search-submit-button').click()

@@ -36,6 +36,6 @@ driver.find_element(By.XPATH, "//div[@id='nav-belt']//input[@placeholder='Search
 
 # Allure Terminal Commands
 
-# behave -f allure_behave.formatter:AllureFormatter -o test_results/ features/tests/amazon_search.feature
+# behave -f allure_behave.formatter:AllureFormatter -o test_results/ features/tests/amazon_search_test.feature
 
 # allure serve test_results/
