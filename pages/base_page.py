@@ -8,7 +8,7 @@ class Page:
     def open_url(self, end_url=''):
         url = f'https://www.amazon.com/{end_url}'
         if end_url == '':
-            self.driver.get('https://www.amazon.com/home')
+            self.driver.get('https://www.amazon.com/exec/obidos/tg/browse/-/1055398')
         else:
             self.driver.get(url)
 

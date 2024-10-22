@@ -14,6 +14,11 @@ def search_on_amazon(context, product):
 def click_signin_button(context):
     context.app.header_page.click_signin_button()
 
+@when('Click on cart icon')
+def click_on_cart(context):
+    context.app.header_page.click_on_cart()
+
+
 
 
 

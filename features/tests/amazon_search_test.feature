@@ -6,6 +6,6 @@ Feature: Tests for Amazon search
     When Search for a <search_product>
     Then Verify search results <search_result>
     Examples:
-    |search_product  |search_result|
-    |table           |"table"      |
-    |car             |"car"        |
+    |search_product  |search_result |
+    |table           |"table"       |
+    |car             |"car"         |
