@@ -10,6 +10,10 @@ def open_amazon_page(context):
 def search_on_amazon(context, product):
    context.app.header_page.search_for_product(product)
 
+@when('Click Signin button')
+def click_signin_button(context):
+    context.app.header_page.click_signin_button()
+
 
 
 

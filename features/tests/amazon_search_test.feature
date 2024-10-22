@@ -1,5 +1,5 @@
 # Created by white at 10/19/2024
-Feature: Tests for amazon search
+Feature: Tests for Amazon search
 
   Scenario Outline: Verify user can search for a product
     Given Open Amazon page
