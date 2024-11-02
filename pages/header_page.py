@@ -7,7 +7,7 @@ class HeaderPage(Page):
     SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
     SEARCH_BTN = (By.ID, 'nav-search-submit-button')
     SIGNIN_BTN = (By.ID, 'nav-link-accountList-nav-line-1')
-    CART_ICON = (By.CSS_SELECTOR, '.nav-cart-icon.nav-sprite')
+    CART_ICON = (By.ID, 'nav-cart')
 
     def search_for_product(self, product):
         self.input_text(product, *self.SEARCH_FIELD)

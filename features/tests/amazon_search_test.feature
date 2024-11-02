@@ -9,3 +9,4 @@ Feature: Tests for Amazon search
     |search_product  |search_result |
     |table           |"table"       |
     |car             |"car"         |
+    |coco coir       |"coco coir"   |

@@ -7,5 +7,5 @@ class SigninPage(Page):
     CONTINUE_BTN = (By.ID, 'continue')
 
     def verify_signin_page_is_open(self):
-        self.find_element(*self.SIGNIN_LOGO)
+        self.verify_text('Sign in', *self.SIGNIN_LOGO)
         self.find_element(*self.CONTINUE_BTN)

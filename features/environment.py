@@ -9,6 +9,8 @@ def browser_init(context):
     :param context: Behave context
     """
     # driver_path = ChromeDriverManager().install()
+
+# Google Chrome
     service = Service(executable_path=r'C:\Users\white\my-python-selenium-automation\chromedriver.exe')
     context.driver = webdriver.Chrome(service=service)
 

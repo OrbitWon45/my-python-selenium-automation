@@ -9,6 +9,7 @@ class Page:
         url = f'https://www.amazon.com/{end_url}'
         if end_url == '':
             self.driver.get('https://www.amazon.com/exec/obidos/tg/browse/-/1055398')
+            self.driver.refresh()
         else:
             self.driver.get(url)
 
@@ -25,4 +26,4 @@ class Page:
     def verify_text(self, expected_text, *locator):
         actual_text = self.driver.find_element(*locator).text
         assert actual_text == expected_text, \
-            f"expected text {expected_text} did not match actual text {actual_text}"
+            f"expected text: {expected_text}, did not match actual text: {actual_text}."
