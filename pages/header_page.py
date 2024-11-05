@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from pages.base_page import Page
 
+
 class HeaderPage(Page):
 
     SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
