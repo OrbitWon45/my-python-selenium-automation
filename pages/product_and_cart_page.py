@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 class ProductAndCartPage(Page):
     EMPTY_CART_MSG = (By.CSS_SELECTOR, 'h3.sc-your-amazon-cart-is-empty')
-    COCO_BLISS_10LB = (By.CSS_SELECTOR, '#search > div.s-desktop-width-max.s-desktop-content.s-opposite-dir.s-wide-grid-style.sg-row > div.sg-col-20-of-24.s-matching-dir.sg-col-16-of-20.sg-col.sg-col-8-of-12.sg-col-12-of-16 > div > span.rush-component.s-latency-cf-section > div.s-main-slot.s-result-list.s-search-results.sg-row > div:nth-child(7) > div > div > div > div > span > div > div > div.s-product-image-container.aok-relative.s-text-center.s-image-overlay-grey.puis-image-overlay-grey.s-padding-left-small.s-padding-right-small.puis-spacing-small.s-height-equalized.puis.puis-v2lk1billfaou72dkme0sb0jkg6 > span > a')
+    COCO_BLISS_10LB = (By.XPATH, '//*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[3]/div/div/div/div/span/div/div/div[2]/div[1]/h2/a')
     ADD_TO_CART_BTN = (By.ID, 'add-to-cart-button')
     ADDED_TO_CART_MSG = (By.CSS_SELECTOR, 'h1.a-size-medium-plus.a-color-base.sw-atc-text.a-text-bold')
     CART_COUNT = (By.ID, 'nav-cart-count')

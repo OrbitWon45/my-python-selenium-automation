@@ -5,6 +5,7 @@ Feature: Amazon products and cart tests
     Given Open Amazon page
     When Click on cart icon
     Then Verify “Your cart is empty” message is shown
+    And Cart count shows 0 items added
 
   Scenario: Verify user can add a product to cart
     Given Open Amazon page
