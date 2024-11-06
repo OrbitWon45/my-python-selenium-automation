@@ -22,6 +22,16 @@ def click_on_cart(context):
     context.app.header_page.click_on_cart()
 
 
+@when('Click on Customer Service button')
+def click_on_customer_service_button(context):
+    context.app.header_page.click_on_customer_service_button()
+
+
+@then('Cart count shows {expected_amount} items added')
+def verify_cart_count(context, expected_amount):
+    context.app.header_page.verify_cart_count(expected_amount)
+
+
 
 
 

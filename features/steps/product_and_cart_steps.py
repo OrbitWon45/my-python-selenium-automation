@@ -16,9 +16,7 @@ def verify_cart_is_empty(context):
     context.app.product_and_cart_page.verify_cart_is_empty()
 
 
-@then('Cart count shows {expected_amount} items added')
-def verify_cart_count(context, expected_amount):
-    context.app.product_and_cart_page.verify_cart_count(expected_amount)
+
 
 
 
