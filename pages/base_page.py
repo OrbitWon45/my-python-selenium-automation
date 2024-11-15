@@ -1,9 +1,11 @@
-
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class Page:
 
     def __init__(self, driver):
         self.driver = driver
+        self.wait = WebDriverWait(self.driver, 10)
 
     def open_url(self, end_url=''):
         url = f'https://www.amazon.com/{end_url}'
@@ -25,6 +27,11 @@ class Page:
     def input_text(self, text, *locator):
         e = self.find_element(*locator)
         e.send_keys(text)
+
+    def wait_for_element_to_be_clickable_click(self, *locator):
+        e = self.wait.until(EC.element_to_be_clickable(locator),
+                            message= f'Element not clickable: {locator}')
+        e.click()
 
     def verify_text(self, expected_text, *locator):
         actual_text = self.driver.find_element(*locator).text
