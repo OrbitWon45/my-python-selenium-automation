@@ -1,6 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+
 class Page:
 
     def __init__(self, driver):
@@ -10,8 +11,7 @@ class Page:
     def open_url(self, end_url=''):
         url = f'https://www.amazon.com/{end_url}'
         if end_url == '':
-            self.driver.get('https://www.amazon.com/exec/obidos/tg/browse/-/1055398')
-            self.driver.refresh()
+            self.driver.get('https://www.amazon.com/home')
         else:
             self.driver.get(url)
 
