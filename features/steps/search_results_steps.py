@@ -1,7 +1,8 @@
 from behave import given, when, then
+from time import sleep
 
 
-@when('Choose a product')
+@when('Choose a coco coir product')
 def choose_a_product_coco(context):
     context.app.product_and_cart_page.choose_a_product_coco()
 

@@ -1,12 +1,13 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from time import sleep
 
 
 class Page:
 
     def __init__(self, driver):
         self.driver = driver
-        self.wait = WebDriverWait(self.driver, 10)
+        self.wait = WebDriverWait(self.driver, 12)
 
     def open_url(self, end_url=''):
         url = f'https://www.amazon.com/{end_url}'
@@ -14,6 +15,8 @@ class Page:
             self.driver.get('https://www.amazon.com/home')
         else:
             self.driver.get(url)
+            sleep(2)
+            self.driver.refresh()
 
     def find_element(self, *locator):
         return self.driver.find_element(*locator)

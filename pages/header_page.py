@@ -8,6 +8,7 @@ class HeaderPage(Page):
     SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
     CUSTOMER_SERVICE_BTN = (By.CSS_SELECTOR, 'a[href*="/gp/help/customer/display.html"]')
     SEARCH_BTN = (By.ID, 'nav-search-submit-button')
+    POPUP_SIGNIN_BTN = (By.ID, 'nav-signin-tooltip')
     SIGNIN_BTN = (By.ID, 'nav-link-accountList-nav-line-1')
     CART_ICON = (By.ID, 'nav-cart')
     CART_COUNT = (By.ID, 'nav-cart-count')
@@ -18,6 +19,9 @@ class HeaderPage(Page):
 
     def click_signin_button(self):
         self.click(*self.SIGNIN_BTN)
+
+    def click_signin_popup_btn(self):
+        self.wait_for_element_to_be_clickable_click(*self.POPUP_SIGNIN_BTN)
 
     def click_on_customer_service_button(self):
         self.click(*self.CUSTOMER_SERVICE_BTN)

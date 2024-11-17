@@ -7,6 +7,13 @@ def open_amazon_page(context):
     context.app.header_page.open_url()
 
 
+@when('Click signin popup button')
+def click_signin_popup_btn(context):
+    context.app.header_page.click_signin_popup_btn()
+
+
+
+
 @when('Search for {product}')
 def search_on_amazon(context, product):
    context.app.header_page.search_for_product(product)
