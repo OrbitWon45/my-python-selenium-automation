@@ -15,3 +15,9 @@ Feature: Tests for Amazon search
     |table           |"table"       |
     |car             |"car"         |
     |coco coir       |"coco coir"   |
+
+
+  Scenario: Verify that user sees a img and name on products search result
+    Given Open Amazon page
+    When Search for coffee
+    Then Verify products have a picture and name

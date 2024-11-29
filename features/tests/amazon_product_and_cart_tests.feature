@@ -16,7 +16,6 @@ Feature: Amazon product and cart tests
     Then Verify "Added to cart" message is shown
     And Cart count shows 1 items added
 
-
   Scenario: Verify correct product is added to cart
     Given Open Amazon page
     When Search for coco coir
@@ -25,3 +24,9 @@ Feature: Amazon product and cart tests
     And Add product to cart
     And Click on cart icon
     Then Verify correct product is added to cart
+
+  Scenario: Verify user can select product options
+    Given Open Amazon product B0CG5R5YF8 page
+    Then Verify user can click through options
+
+

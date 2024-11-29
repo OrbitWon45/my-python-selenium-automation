@@ -12,6 +12,9 @@ def click_signin_popup_btn(context):
     context.app.header_page.click_signin_popup_btn()
 
 
+@when('Click Returns and Orders')
+def click_returns_and_orders(context):
+    context.app.header_page.click_returns_and_orders()
 
 
 @when('Search for {product}')

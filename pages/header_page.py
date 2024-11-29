@@ -6,6 +6,7 @@ from pages.base_page import Page
 class HeaderPage(Page):
 
     SEARCH_FIELD = (By.ID, 'twotabsearchtextbox')
+    RETURNS_AND_ORDERS_BTN = (By.ID, 'nav-orders')
     CUSTOMER_SERVICE_BTN = (By.CSS_SELECTOR, 'a[href*="/gp/help/customer/display.html"]')
     SEARCH_BTN = (By.ID, 'nav-search-submit-button')
     POPUP_SIGNIN_BTN = (By.ID, 'nav-signin-tooltip')
@@ -16,6 +17,9 @@ class HeaderPage(Page):
     def search_for_product(self, product):
         self.input_text(product, *self.SEARCH_FIELD)
         self.click(*self.SEARCH_BTN)
+
+    def click_returns_and_orders(self):
+        self.click(*self.RETURNS_AND_ORDERS_BTN)
 
     def click_signin_button(self):
         self.click(*self.SIGNIN_BTN)

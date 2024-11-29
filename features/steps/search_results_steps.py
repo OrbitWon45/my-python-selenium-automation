@@ -10,3 +10,8 @@ def choose_a_product_coco(context):
 @then('Verify search results {expected_result}')
 def verify_search_results(context, expected_result):
     context.app.search_results_page.verify_search_results(expected_result)
+
+
+@then('Verify products have a picture and name')
+def verify_products_have_img_and_name(context):
+    context.app.search_results_page.verify_products_have_img_and_name()
