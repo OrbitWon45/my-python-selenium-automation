@@ -35,3 +35,9 @@ class HeaderPage(Page):
 
     def verify_cart_count(self, expected_text):
         self.verify_text(expected_text, *self.CART_COUNT)
+
+    def verify_popup_signin_btn_is_clickable(self):
+        self.wait_for_element_to_be_clickable(*self.POPUP_SIGNIN_BTN)
+
+    def verify_popup_signin_btn_disappears(self):
+        self.wait_for_element_to_disappear(*self.POPUP_SIGNIN_BTN)

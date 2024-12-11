@@ -17,3 +17,11 @@ Feature: Signin tests
       Given Open Amazon page
       When Click signin popup button
       Then Verify Signin page is opened
+
+
+    Scenario: User sees popup SignIn button and it disappears
+      Given Open Amazon page
+      Then Verify popup SignIn button is clickable
+      When Wait 3 seconds
+      Then Verify popup SignIn button is clickable
+      And Verify popup SignIn button disappears

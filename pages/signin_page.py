@@ -10,3 +10,4 @@ class SigninPage(Page):
     def verify_signin_page_is_open(self):
         self.verify_text('Sign in', *self.SIGNIN_LOGO)
         self.find_element(*self.CONTINUE_BTN)
+        self.verify_partial_url('ap/signin')
