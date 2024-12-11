@@ -9,3 +9,8 @@ def open_amazon_page_bestsellers(context):
 @then('Verify the {expected_amount} links are displayed at the top of the B.S. page')
 def verify_bestsellers_top_page_links(context,expected_amount):
     context.app.bestsellers_page.verify_bestsellers_top_page_links(expected_amount)
+
+
+@then('Verify user can click thr the top links')
+def click_thr_top_links(context):
+    context.app.bestsellers_page.click_thr_top_links()
